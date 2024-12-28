@@ -1,0 +1,733 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+.nav-container {
+    background: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo img {
+    height: 32px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+/* Hero Section */
+.hero {
+    background: #0066FF;
+    color: white;
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto 1.5rem;
+}
+
+.hero span.ride-smart {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    font-size: 1.2rem;
+}
+
+.app-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0 3rem;
+}
+
+.app-buttons img {
+    height: 40px;
+    width: auto;
+}
+
+.hero-phones {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.phone {
+    width: 280px;
+    height: auto;
+}
+
+.phone.center {
+    width: 320px;
+    margin-top: -50px;
+}
+
+/* Features Section */
+.features {
+    padding: 5rem 5%;
+    background: white;
+}
+
+.feature-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 10rem;
+}
+
+.feature-image {
+    flex: 1;
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Services Section */
+.services-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Adjust gap between text and image */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.services-content h2 {
+    font-size: 3rem; /* Make the heading significantly larger */
+    font-weight: bold; /* Ensure it stands out */
+    margin-bottom: 15px; /* Add some spacing below the heading */
+}
+
+.services-content {
+    flex: 1;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.services-content p {
+    font-size: 1rem; /* Keep the paragraph text smaller */
+    line-height: 2; /* Adjust for better readability */
+}
+
+.feature-image {
+    flex: 1;
+    text-align: right; /* Ensures the image stays on the right */
+}
+
+.feature-image img {
+    max-width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    max-height: 400px; /* Adjust the maximum height as needed */
+    object-fit: contain; /* Ensures the image fits nicely */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 4rem;
+        margin: 0.5rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .feature-container,
+    .services-container {
+        flex-direction: column;
+    }
+
+    .hero-phones {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .phone {
+        width: 220px;
+    }
+
+    .phone.center {
+        width: 240px;
+        margin-top: 0;
+    }
+}
+/* Cab Apps Section */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.blue-box {
+  background-color: #005CFF;
+  color: white;
+  text-align: left;
+  padding: 130px; /* Reduced padding for better space utilization */
+  border-radius: 50px;
+  max-width: 90%;
+  width: 100%;
+  margin-bottom: 0;
+  position: relative; /* Allows positioning of the white box */
+  display: flex;
+  flex-direction: column;
+}
+.blue-box h1 {
+  font-size: 50px;
+  margin: 10;
+}
+
+.blue-box p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.white-box {
+    align-items: end;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    max-width: 300px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push content and image apart */
+    margin-top: 20px;
+}
+.text-content {
+    flex: 3; /* Allow text content to take up space */
+}
+
+.white-box h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.white-box p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #555;
+}
+
+
+
+
+/* Features Grid */
+.features-grid {
+    padding: 6rem;
+    text-align: center;
+}
+
+.features-grid h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.features-grid .subtitle {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.features-container {
+    display: grid;
+    grid-template-areas: 
+        "card1 phone card2"
+        "card3 phone card4";
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.feature-card {
+    background: #eeeff1;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.feature-card:nth-child(1) { grid-area: card1; }
+.feature-card:nth-child(2) { grid-area: card2; }
+.feature-card:nth-child(4) { grid-area: card3; }
+.feature-card:nth-child(5) { grid-area: card4; }
+
+.feature-card img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.phone-showcase {
+    grid-area: phone;
+    background: var(--primary-blue);
+    padding: 3rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phone-showcase img {
+    width: 100%;
+    max-width: 400px;
+    height: max-content;
+}
+
+/* FAQ Section */
+.faq-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem 5%;
+}
+
+.faq-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.stylized {
+    color: #007bff; /* Set the color to a bright blue */
+    font-weight: bold; /* Make it bold */
+    font-style: italic; /* Add italic styling */
+    
+}
+
+.left-side {
+        flex: 1.5;
+        padding-right: 80px; /* Add space between the left and right sections */
+        margin-left: 40px;
+     
+}
+.left-side h2 {
+    font-size: 45px; /* Larger font for headings */
+}
+
+.right-side {
+    flex: 2;
+    font-size: 20px; /* Larger font for headings */
+}
+
+.faq-list {
+    margin-top: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    display: flex;
+    font-weight: bold; /* Makes all questions bold */
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 20px;
+    transition: transform 0.3s;
+}
+
+.icon.active {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    display: none;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    nav {
+        padding: 1rem 2rem;
+    }
+
+    .hero {
+        padding: 2rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        margin-bottom: 3rem;
+    }
+
+    .hero-image {
+        position: relative;
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .app-stores {
+        justify-content: center;
+    }
+
+    .features-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cab-apps {
+        margin: 2rem;
+        padding: 3rem;
+    }
+}
+
+
+/*blogs*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.blogs {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blogs h2 {
+    font-size: 28px;
+    text-align: start;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.blog-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+}
+
+.blog-card .blog-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.blog-card h3 {
+    font-size: 18px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.blog-card .blog-meta {
+    font-size: 14px;
+    color: #666;
+}
+
+/*Support Section*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.support-section {
+    text-align: start;
+    padding: 40px 20px;
+}
+
+.support-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.support-logos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between rows */
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-row {
+    display: flex;
+    gap: 200px; /* Space between logos in a row */
+    justify-content: center;
+}
+
+.logo-row img {
+    width: 100px; /* Adjust logo size */
+    height: auto;
+}
+
+
+.compare-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    background-color: #007bff; /* Adjust the color to your needs */
+    color: #fff;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box; /* Ensures padding doesn't affect the width */
+}
+
+
+.compare-text {
+    max-width: 50%;
+    padding-left: 80px;
+}
+
+.compare-text h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.compare-text h2 span {
+    color: #fff; /* Blue color */
+}
+
+.compare-text p {
+    font-size: 25px;
+    line-height: 1;
+    margin: 0;
+}
+
+.qr-code img {
+    width: 320px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/*footer section*/
+body {
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    background-color: #333; /* Light black color */
+    color: white;
+    padding: 40px 5%; /* Adjust padding for better responsiveness */
+    border-top: 1px solid #e0e0e0;
+    width: 100%; /* Ensures full width of the screen */
+    box-sizing: border-box; /* Includes padding in width calculation */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-logo-section {
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-logo {
+    width: 45px;
+    margin-bottom: 10px;
+}
+
+.footer-slogan {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-links-section {
+    flex: 1;
+    max-width: 200px;
+}
+
+.footer-links-section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 8px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-download-section {
+    flex: 1;
+    max-width: 400px;
+}
+
+.footer-download-section h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.download-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.download-buttons img {
+    width: 120px;
+}
+
+.company-address {
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    color: #ccc; /* Lighter text for contrast */
+}
+
+.footer-policy-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-policy-links a {
+    text-decoration: none;
+    color: #ccc; /* Lighter text for contrast */
+    font-size: 14px;
+}
+
+  
