@@ -115,11 +115,11 @@ body {
 
 /* Team Section */
 .team {
-    background: linear-gradient(to bottom, #0066FF 60%, white 50%);
+    background: url('images/back.png') no-repeat center center; /* Replace with your image name */
+    background-size: cover; /* Ensures the image covers the entire section */
     color: white;
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
+    padding: 4rem 5%;
+    text-align: center;
 }
 
 .team-header {
@@ -435,7 +435,7 @@ button:hover {
 }
 
 
-/*blogs*/
+/* Blogs Section */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -445,7 +445,7 @@ body {
 
 .blogs {
     padding: 20px;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -456,36 +456,38 @@ body {
     color: #333;
 }
 
-.blog-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* Scrollable container */
+.scrollable-container {
+    max-height: 400px; /* Fixed height for the scrollable section */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-right: 10px;
 }
 
-.blog-card {
-    background-color: #fff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Blog image container */
+.blog-image-container {
     text-align: center;
-    padding: 15px;
+    margin-bottom: 20px;
 }
 
-.blog-card .blog-image {
+.full-blog-image {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    max-width: 1400px; /* Adjust this to fit your design */
+    height: auto;
+    border-radius: 10px;
 }
 
-.blog-card h3 {
-    font-size: 18px;
-    margin: 15px 0;
-    color: #333;
+/* Optional: Scrollbar Styling */
+.scrollable-container::-webkit-scrollbar {
+    width: 4px;
 }
 
-.blog-card .blog-meta {
-    font-size: 14px;
-    color: #666;
+.scrollable-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+    background-color: #f9f9f9;
 }
 
 /*Support Section*/
@@ -528,7 +530,7 @@ h2 {
 }
 
 .logo-row img {
-    width: 100px; /* Adjust logo size */
+    width: 1300px; /* Adjust logo size */
     height: auto;
 }
 
@@ -537,7 +539,7 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 10%;
+    padding: 80px 10%;
     background-color: #007bff; /* Adjust the color to your needs */
     color: #fff;
     width: 100%;
@@ -548,7 +550,7 @@ h2 {
 
 .compare-text {
     max-width: 50%;
-    padding-left: 80px;
+    padding-left: 10px;
 }
 
 .compare-text h2 {
@@ -568,7 +570,7 @@ h2 {
 }
 
 .qr-code img {
-    width: 320px;
+    width: 300px;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -602,7 +604,7 @@ body {
 }
 
 .footer-logo {
-    width: 45px;
+    width: 130px;
     margin-bottom: 10px;
 }
 

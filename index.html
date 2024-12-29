@@ -28,29 +28,33 @@
         <p>Naviget lets you compare and book rides across Ola, Uber, Rapido, BluSmart, and more. Powered by ONDC, it's your one-stop app for seamless and smart commute.</p>
         <p>Download Naviget today to save time and money effortlessly.</p>
         <div class="app-buttons">
-            <a href="#" class="play-store"><img src="images/play_store.jpg" alt="Get it on Play Store"></a>
-            <a href="#" class="app-store"><img src="images/app_store.jpg" alt="Download on App Store"></a>
+            <a href="#" class="play-store"><img src="images/image 26.png" alt="Get it on Play Store"></a>
+            <a href="#" class="app-store"><img src="images/image 27.png" alt="Download on App Store"></a>
         </div>
         <div class="hero-phones">
-            <img src="images/Device.png" alt="Naviget App" class="phone">
-            <img src="images/Free mockup of female hand holding iPhone 14 Pro (Mockuuups Studio).png" alt="Naviget App" class="phone center">
-            <img src="images/Device.png" alt="Naviget App" class="phone">
+            <img src="images/Hero image 1.png" alt="Naviget App" class="phone">
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="feature-container">
-            
-            <div class="feature-image">
-                <img src="images/image 146.png" alt="Interoperable mobility">
-            </div>
-            <div class="feature-content">
-                <h2>World's first interoperable mobility App</h2>
-                <p>Naviget is the world's first interoperable app that acts as a customer-facing buyer platform for all ride-hailing operators. By supporting both ONDC and non-ONDC partner apps, we give users the ability to book rides from a wide range of providers through one seamless interface, ensuring convenience and flexibility in their travel choices.</p>
-            </div>
+<!-- Features Section -->
+<section class="features">
+    <div class="feature-container">
+        <div class="feature-image">
+            <img src="images/image 146.png" alt="Interoperable mobility">
         </div>
-    </section>
+        <div class="feature-content">
+            <div class="powered-by">
+                Powered by <img src="images/image 145.png" alt="ONDC">
+            </div>
+            <h2>World's first interoperable mobility App</h2>
+            <p>
+                Naviget is the world's first interoperable app that acts as a customer-facing buyer platform for all ride-hailing operators. By supporting both ONDC and non-ONDC partner apps, we give users the ability to book rides from a wide range of providers through one seamless interface, ensuring convenience and flexibility in their travel choices.
+            </p>
+        </div>
+    </div>
+</section>
+
+
 
     <!-- Services Section -->
     <section class="services">
@@ -67,20 +71,20 @@
         </div>
     </section>
 
-    <!-- Cab Apps Section -->
-    <section class="cab-apps">
-        <div class="section split-container">
-            <div class="blue-box">
-                <h1>All of your favorite cab apps at one place</h1>
-                <p>Bikeshare. Scooters. Ridehail. And more. Quickly compare all of your options.</p>
-                 <div class="content-wrapper">
-                    <div class="text-content">
-                    </div>
-                    <img src="images/Group 426.png" alt="Compare Apps White Box" class="white-box">
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Cab Apps Section -->
+<section class="cab-apps">
+    <div class="section split-container">
+      <div class="blue-box">
+        <h1>All of your favorite cab apps in one place</h1>
+        <!-- <p>Bikeshare. Scooters. Ridehail. And more. Quickly compare all of your options.</p> -->
+        
+        <!-- White Box Image -->
+        <img src="images/Group 426.png" alt="Compare Apps White Box" class="white-box">
+      </div>
+    </div>
+  </section>
+  
+  
     <!-- Features Grid Section -->
     <section class="features-grid">
         <h2>Naviget the future of Ride-hailing</h2>
@@ -94,30 +98,30 @@
             </div>
             
             <div class="feature-card">
-                <img src="images/sec.png" alt="Best Value">
+                <img src="images/hugeicons_savings.png" alt="Best Value">
                 <h3>Best Value</h3>
                 <p>Get the best value by comparing rides across various providers.</p>
             </div>
 
             <div class="phone-showcase">
-                <img src="images/middle.png" alt="Naviget App Interface">
+                <img src="images/Features Mobile Mockup.png" alt="Naviget App Interface">
             </div>
 
             <div class="feature-card">
-                <img src="images/Third.png" alt="Booking Probability">
+                <img src="images/mdi-light_repeat.png" alt="Booking Probability">
                 <h3>Booking Probability</h3>
                 <p>Our ML algorithm predicts booking probability based on operator availability, traffic, and other factors, providing accurate ride insights.</p>
             </div>
 
             <div class="feature-card">
-                <img src="images/Fourth.png" alt="Discover New Services">
+                <img src="images/FF.png" alt="Discover New Services">
                 <h3>Discover New Services</h3>
                 <p>Discover and book new services as they become available in your area.</p>
             </div>
         </div>
     </section>
 
-   <!-- FAQ Section -->
+<!-- FAQ Section -->
 <section class="faq-section">
     <div class="faq-header">
         <div class="left-side">
@@ -130,37 +134,58 @@
         
         <div class="right-side">
             <div class="faq-list">
-                <div class="faq-item active">
-                    <div class="faq-question">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(0)">
                         <span>What is Naviget?</span>
-                        <span class="icon">×</span>
+                        <span class="icon">+</span>
                     </div>
                     <div class="faq-answer">
                         Naviget is an innovative ride-hailing platform that simplifies your commuting experience by providing seamless access to multiple ride options, including both ONDC and non-ONDC partners, all in one place.
                     </div>
                 </div>
+
+                <!-- FAQ Item 2 -->
                 <div class="faq-item">
-                    <div class="faq-question">
+                    <div class="faq-question" onclick="toggleFAQ(1)">
                         <span>How does Naviget work?</span>
                         <span class="icon">+</span>
                     </div>
+                    <div class="faq-answer">
+                        Naviget aggregates ride options from various providers, allowing you to compare prices and book the most suitable ride for your needs through a single, user-friendly interface.
+                    </div>
                 </div>
+
+                <!-- FAQ Item 3 -->
                 <div class="faq-item">
-                    <div class="faq-question">
+                    <div class="faq-question" onclick="toggleFAQ(2)">
                         <span>What makes Naviget different from other ride-hailing apps?</span>
                         <span class="icon">+</span>
                     </div>
+                    <div class="faq-answer">
+                        Naviget uniquely combines both ONDC and non-ONDC partners, offering you more choices and better prices while maintaining a seamless booking experience.
+                    </div>
                 </div>
+
+                <!-- FAQ Item 4 -->
                 <div class="faq-item">
-                    <div class="faq-question">
+                    <div class="faq-question" onclick="toggleFAQ(3)">
                         <span>How does Naviget make money?</span>
                         <span class="icon">+</span>
                     </div>
+                    <div class="faq-answer">
+                        Naviget earns through small service fees on successful bookings while maintaining competitive prices for users.
+                    </div>
                 </div>
+
+                <!-- FAQ Item 5 -->
                 <div class="faq-item">
-                    <div class="faq-question">
+                    <div class="faq-question" onclick="toggleFAQ(4)">
                         <span>How do I book a ride on Naviget?</span>
                         <span class="icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Simply open the app, enter your destination, compare available options, and book your preferred ride with just a few taps.
                     </div>
                 </div>
             </div>
@@ -168,31 +193,47 @@
     </div>
 </section>
 
-    <!-- Blogs Section -->
-    <section class="blogs">
-        <h2>Blogs and Updates</h2>
+<script>
+    // JavaScript function to toggle the visibility of FAQ answers
+    function toggleFAQ(index) {
+        const faqItems = document.querySelectorAll('.faq-item');
+        const icon = faqItems[index].querySelector('.icon');
+        const answer = faqItems[index].querySelector('.faq-answer');
+        
+        if (answer.style.display === 'block') {
+            answer.style.display = 'none';
+            icon.textContent = '+';
+        } else {
+            answer.style.display = 'block';
+            icon.textContent = '×';
+        }
+    }
+</script>
+
+<!-- Blogs Section -->
+<section class="blogs">
+    <h2>Blogs and Updates</h2>
+    
+    <!-- Scrollable container -->
+    <div class="scrollable-container">
+        <!-- Single image containing all four blogs -->
         <div class="blog-image-container">
             <img src="images/Blog.png" alt="Blogs and Updates" class="full-blog-image">
         </div>
-    </section>
+    </div>
+</section>
+
+
 
     <!-- Support and Comparison Section -->
     <section class="support-section">
         <h2>We currently support</h2>
         <div class="support-logos">
             <div class="logo-row">
-                <img src="images/oola.png" alt="OLA">
-                <img src="images/Rapido Logo.jpg" alt="Rapido">
-                <img src="images/ubber.png" alt="Uber">
-                <img src="images/Yaary.png" alt="Yaary">
-                <img src="images/Blue.png" alt="BLU">
+                <img src="images/Frame 349.png" alt="All Logos"> <!-- Single Image Containing All Logos -->
             </div>
             <div class="logo-row">
-                <img src="images/Namma.png" alt="Namma Yatri">
-                <img src="rickshaw-logo.png" alt="Rickshaw">
-                <img src="quicreach-logo.png" alt="QuicReach">
-                <img src="images/Fery.png" alt="Fery">
-                <img src="images/quick.png" alt="Quick Ride">
+                <img src="images/Frame 684.png" alt="All Logos"> <!-- Single Image Containing All Logos -->
             </div>
         </div>
     </section>
@@ -212,8 +253,8 @@
     <div class="footer-container">
       <!-- Logo and Slogan -->
       <div class="footer-logo-section">
-        <img src="images/Frame 318.png" src="images/Title.png" class="footer-logo" />
-        <p class="footer-slogan">oJi, make informed choices.<br />Download the app today</p>
+        <img src="images/Frame 803.png" src="images/Title.png" class="footer-logo" />
+        <p class="footer-slogan">Ride Smart with Naviget</p>
       </div>
   
       <!-- Quick Links -->
@@ -231,8 +272,8 @@
       <div class="footer-download-section">
         <h3>Download Now</h3>
         <div class="download-buttons">
-          <a href="#"><img src="images/play_store.jpg" alt="Google Play" /></a>
-          <a href="#"><img src="images/app_store.jpg" alt="App Store" /></a>
+          <a href="#"><img src="images/image 26.png" alt="Google Play" /></a>
+          <a href="#"><img src="images/image 27.png" alt="App Store" /></a>
         </div>
         <p class="company-address">
           StepZero Labs Private Limited,<br />
@@ -251,7 +292,4 @@
       </div>
     </div>
   </footer>
-  
-  
-
 </html>
