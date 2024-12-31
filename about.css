@@ -29,10 +29,10 @@ body {
 
 .nav-container {
     background: white;
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     padding: 12px 24px;
-    border-radius: 50px;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +54,43 @@ body {
     font-size: 16px;
     font-weight: 500;
 }
+/* Mobile Navigation Styles */
+.mobile-menu-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 4px;
+    color: #333;
+}
 
+.mobile-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 16px;
+    margin-top: 8px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mobile-nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.mobile-nav a:hover {
+    background-color: #f5f5f5;
+}
 /* Hero Section */
 .hero {
     background: #0066FF;
@@ -112,6 +148,46 @@ body {
     width: 320px;
     margin-top: -50px;
 }
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .hero {
+        padding: 2rem 3%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .app-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .app-buttons img {
+        height: 35px;
+    }
+
+    .hero-phones {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .phone {
+        width: 200px;
+    }
+
+    .phone.center {
+        width: 240px;
+        margin-top: -20px;
+    }
+}
+
 
 /* Team Section */
 .team {
@@ -212,7 +288,78 @@ body {
     height: 20px;
     vertical-align: middle; /* Align icon with text */
 }
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
+@media screen and (max-width: 768px) {
+    .team {
+        padding: 3rem 3%;
+    }
+
+    .team h2 {
+        font-size: 36px;
+    }
+
+    .team-logo {
+        font-size: 36px;
+        padding: 8px 16px;
+    }
+
+    .car-icon {
+        width: 80px;
+        top: -20px;
+        right: -60px;
+    }
+
+    .team-header::after {
+        width: 100px;
+        left: calc(50% + 60px);
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .team {
+        padding: 2rem 2%;
+    }
+
+    .team h2 {
+        font-size: 28px;
+    }
+
+    .team-logo {
+        font-size: 28px;
+        padding: 6px 12px;
+    }
+
+    .car-icon {
+        width: 60px;
+        top: -15px;
+        right: -40px;
+    }
+
+    .team-header::after {
+        width: 60px;
+        left: calc(50% + 40px);
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .member-info h3 {
+        font-size: 16px;
+    }
+}
 
 /*Story */
 
@@ -266,6 +413,49 @@ h1 {
 .phone-image img {
     max-width: 120%;
     height: auto;
+}
+/* Mobile and Tablet Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .story p {
+        font-size: 1rem;
+    }
+
+    .phone-image {
+        flex: 0 0 auto;
+    }
+
+    .phone-image img {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .content {
+        gap: 1.5rem;
+    }
 }
 
 .form-section {
@@ -334,26 +524,28 @@ button:hover {
     justify-content: space-between;
     align-items: flex-start;
     padding: 4rem 5%;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
 }
 
 .faq-header {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 20px; /* Add spacing between header and content */
 }
+
 .stylized {
     color: #007bff; /* Set the color to a bright blue */
     font-weight: bold; /* Make it bold */
     font-style: italic; /* Add italic styling */
-    
 }
 
 .left-side {
-        flex: 1.5;
-        padding-right: 80px; /* Add space between the left and right sections */
-        margin-left: 40px;
-     
+    flex: 1.5;
+    padding-right: 80px; /* Add space between the left and right sections */
+    margin-left: 40px;
 }
+
 .left-side h2 {
     font-size: 45px; /* Larger font for headings */
 }
@@ -397,100 +589,199 @@ button:hover {
     display: block;
 }
 
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    nav {
-        padding: 1rem 2rem;
-    }
-
-    .hero {
-        padding: 2rem;
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .faq-section {
         flex-direction: column;
-        text-align: center;
+        padding: 2rem 5%; /* Reduce padding for smaller screens */
     }
 
-    .hero-content {
-        margin-bottom: 3rem;
+    .left-side {
+        margin-left: 0;
+        padding-right: 0;
+        text-align: center; /* Center-align for better presentation on small screens */
+        margin-bottom: 20px; /* Add spacing between sections */
     }
 
-    .hero-image {
-        position: relative;
-        width: 100%;
-        margin-top: 2rem;
+    .left-side h2 {
+        font-size: 35px; /* Adjust font size for smaller screens */
     }
 
-    .app-stores {
-        justify-content: center;
+    .right-side {
+        font-size: 18px; /* Slightly smaller font size for text */
     }
 
-    .features-container {
-        grid-template-columns: 1fr;
+    .faq-header {
+        flex-direction: column;
+        align-items: center; /* Center align the header */
     }
 
-    .cab-apps {
-        margin: 2rem;
-        padding: 3rem;
+    .faq-question {
+        flex-direction: column; /* Stack question and icon vertically */
+        align-items: flex-start;
+    }
+
+    .icon {
+        margin-top: 10px; /* Add spacing between text and icon */
     }
 }
 
 
-/* Blogs Section */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+.blog-section {
+    position: relative;
+    overflow: hidden;
 }
 
-.blogs {
-    padding: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
+.header {
+    margin-bottom: 2rem;
 }
 
-.blogs h2 {
-    font-size: 28px;
-    text-align: start;
-    margin-bottom: 20px;
-    color: #333;
+.header h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
 }
 
-/* Scrollable container */
-.scrollable-container {
-    max-height: 400px; /* Fixed height for the scrollable section */
-    overflow-y: auto; /* Enable vertical scrolling */
-    padding-right: 10px;
+.blog-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 0.5rem 0.25rem 1.5rem;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
-/* Blog image container */
-.blog-image-container {
-    text-align: center;
-    margin-bottom: 20px;
+.blog-container::-webkit-scrollbar {
+    display: none;
 }
 
-.full-blog-image {
+.blog-card {
+    min-width: 300px;
+    background: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-4px);
+}
+
+.blog-image {
+    height: 12rem;
+    overflow: hidden;
+}
+
+.blog-image img {
     width: 100%;
-    max-width: 1400px; /* Adjust this to fit your design */
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
-/* Optional: Scrollbar Styling */
-.scrollable-container::-webkit-scrollbar {
-    width: 4px;
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
 }
 
-.scrollable-container::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 4px;
+.blog-content {
+    padding: 1.5rem;
 }
 
-.scrollable-container::-webkit-scrollbar-track {
-    background-color: #f9f9f9;
+.date {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
 }
 
-/*Support Section*/
+.blog-content h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.75rem;
+}
+
+.read-more {
+    color: #2563eb;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.read-more:hover {
+    color: #1d4ed8;
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .header h2 {
+        font-size: 1.5rem;
+    }
+
+    .blog-container {
+        gap: 1rem;
+        padding: 0.25rem 0.125rem 1rem;
+    }
+
+    .blog-card {
+        min-width: 260px;
+    }
+
+    .blog-image {
+        height: 10rem;
+    }
+
+    .blog-content {
+        padding: 1rem;
+    }
+
+    .blog-content h3 {
+        font-size: 1.125rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .date {
+        font-size: 0.75rem;
+    }
+}
+
+/* Small Mobile Devices */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 1rem 0.5rem;
+    }
+
+    .header h2 {
+        font-size: 1.25rem;
+    }
+
+    .blog-card {
+        min-width: 220px;
+    }
+
+    .blog-image {
+        height: 9rem;
+    }
+
+    .blog-content {
+        padding: 0.875rem;
+    }
+
+    .blog-content h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Support Section */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -508,6 +799,7 @@ h2 {
 .support-section {
     text-align: start;
     padding: 40px 20px;
+    padding-left: 50px;
 }
 
 .support-section h2 {
@@ -525,13 +817,44 @@ h2 {
 
 .logo-row {
     display: flex;
-    gap: 200px; /* Space between logos in a row */
+    gap: 50px; /* Space between logos in a row */
     justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping for responsiveness */
 }
 
 .logo-row img {
-    width: 1300px; /* Adjust logo size */
+    width: 1200px; /* Adjust logo size for better fit */
     height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .support-section {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .support-section h2 {
+        font-size: 24px; /* Smaller font size for headings */
+    }
+
+    .logo-row {
+        gap: 20px; /* Reduce gap between logos */
+    }
+
+    .logo-row img {
+        width: 1px; /* Reduce logo size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-row {
+        flex-direction: column; /* Stack logos vertically on very small screens */
+        gap: 15px; /* Reduce gap further */
+    }
+
+    .logo-row img {
+        width: 120px; /* Further reduce logo size */
+    }
 }
 
 
@@ -539,7 +862,10 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 80px 10%;
+    padding-left: 50px  ;
+    padding-right: 50px;
+    padding-top:50px;
+    padding-bottom: 50px;
     background-color: #007bff; /* Adjust the color to your needs */
     color: #fff;
     width: 100%;
@@ -549,14 +875,15 @@ h2 {
 
 
 .compare-text {
-    max-width: 50%;
+    max-width: 40%;
     padding-left: 10px;
 }
 
 .compare-text h2 {
-    font-size: 60px;
+    font-size: 55px;
     margin-bottom: 20px;
     color: #fff;
+    line-height: 1.3;
 }
 
 .compare-text h2 span {
@@ -564,9 +891,9 @@ h2 {
 }
 
 .compare-text p {
-    font-size: 25px;
-    line-height: 1;
-    margin: 0;
+    font-size: 23px;
+    line-height: 1.5;
+    margin: 1;
 }
 
 .qr-code img {
@@ -575,8 +902,45 @@ h2 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+/* Add this code for responsive design on mobile */
+@media only screen and (max-width: 768px) {
+    .compare-section {
+        flex-direction: column; /* Stack items vertically */
+        padding: 20px; /* Adjust padding for smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
 
-/*footer section*/
+    .compare-text {
+        max-width: 100%; /* Allow full width for text */
+        text-align: center; /* Center-align text */
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+
+    .compare-text h2 {
+        font-size: 36px; /* Adjust font size for smaller screens */
+    }
+
+    .compare-text p {
+        font-size: 18px; /* Adjust font size for smaller screens */
+    }
+
+    .qr-code {
+        width: 100%; /* Ensure it takes up the full width */
+        display: flex; /* Use flexbox for centering */
+        justify-content: center; /* Center the image horizontally */
+        margin-top: 20px; /* Add spacing between text and QR code */
+    }
+
+    .qr-code img {
+        width: 80%; /* Adjust size for smaller screens */
+        max-width: 300px; /* Limit maximum width */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+/*  footer styles */
 body {
     font-family: Arial, sans-serif;
 }
@@ -691,4 +1055,79 @@ body {
     text-decoration: none;
     color: #ccc; /* Lighter text for contrast */
     font-size: 14px;
+}
+
+/* Responsive design for phones */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .footer-logo-section,
+    .footer-links-section,
+    .footer-download-section {
+        max-width: 100%;
+        flex: none;
+        text-align: start;
+    }
+
+    .footer-logo {
+        margin: 0 auto 10px auto;
+    }
+
+    .footer-slogan {
+        font-size: 12px;
+    }
+
+    .footer-quick-links {
+        text-align: center;
+    }
+
+    .footer-quick-links h3 {
+        font-size: 14px;
+    }
+
+    .footer-quick-links a {
+        font-size: 12px;
+    }
+
+    .footer-links-section h3 {
+        font-size: 18px;
+    }
+
+    .footer-links a {
+        font-size: 12px;
+    }
+
+    .footer-download-section h3 {
+        font-size: 14px;
+    }
+
+    .download-buttons {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .download-buttons img {
+        width: 100px;
+    }
+
+    /* .company-address {
+        font-size: 12px;
+    } */
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: start;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+
+    .footer-policy-links {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
