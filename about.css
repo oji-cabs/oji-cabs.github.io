@@ -54,42 +54,73 @@ body {
     font-size: 16px;
     font-weight: 500;
 }
-/* Mobile Navigation Styles */
-.mobile-menu-btn {
-    border: none;
-    background: none;
+/* Mobile Navigation */
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
     cursor: pointer;
     padding: 4px;
-    color: #333;
 }
 
-.mobile-nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 16px;
-    margin-top: 8px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.nav-toggle-label span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #333;
+    transition: 0.3s;
+}
+
+/* Content spacing */
+.content {
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+    /* background-color: #f3f4f6; */
 }
 
-.mobile-nav a {
-    color: #333;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
-}
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-toggle-label {
+        display: flex;
+    }
 
-.mobile-nav a:hover {
-    background-color: #f5f5f5;
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    .nav-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Hamburger animation */
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .nav-toggle:checked ~ .nav-toggle-label span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
 }
 /* Hero Section */
 .hero {
@@ -191,11 +222,19 @@ body {
 
 /* Team Section */
 .team {
-    background: url('images/back.png') no-repeat center center; /* Replace with your image name */
-    background-size: cover; /* Ensures the image covers the entire section */
-    color: white;
-    padding: 4rem 5%;
+    position: relative;
+    padding: 10rem 5%;
     text-align: center;
+    background: linear-gradient(to bottom, 
+        transparent 0%,
+        transparent 50%,
+        white 50%,
+        white 100%
+    );
+    background-image: url('images/back.png');
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 
 .team-header {
@@ -231,20 +270,19 @@ body {
 
 .car-icon {
     position: absolute;
-    top: -30px; /* Adjust the vertical position of the car */
-    right: -80px; /* Adjust the horizontal position of the car */
-    width: 120px; /* Increased size of the car image */
+    top: -30px;
+    right: -80px;
+    width: 120px;
     height: auto;
 }
 
 .team-header::after {
     content: '';
     position: absolute;
-    width: 150px; /* Adjust the trail length */
+    width: 150px;
     height: 2px;
-    /* border: 2px dashed white; */
     top: 50%;
-    left: calc(50% + 80px); /* Aligns the trail with the car */
+    left: calc(50% + 80px);
     transform: translateY(-50%);
 }
 
@@ -252,30 +290,35 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
-    /* padding-top: 40px; Adds space between the team header and members */
-    /* background: white; */
+    position: relative;
 }
 
 .team-member {
     text-align: center;
+    background: white;
+    /* padding: 10px; */
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
 }
 
 .team-member img {
-    /* width: 200px; Adjust the size as needed */
-    /* height: 200px; */
-    border-radius: 25px; /* Adds rounded corners */
+    border-radius: 20px;
     object-fit: cover;
     margin-bottom: 16px;
-    border: 3px solid; /* Adds a border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+    width: 100%;
+    aspect-ratio: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
 
 .member-info h3 {
     font-size: 18px;
     font-weight: 600;
-    color: black;
+    color: #333;
     margin-bottom: 2px;
     display: flex;
     align-items: center;
@@ -286,7 +329,27 @@ body {
 .linkedin-icon {
     width: 20px;
     height: 20px;
-    vertical-align: middle; /* Align icon with text */
+    vertical-align: middle;
+    color: #0077b5; /* LinkedIn brand color */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
 }
 /* Responsive Styles */
 @media screen and (max-width: 1200px) {
