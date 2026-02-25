@@ -9,4 +9,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: "https://oji-cabs.github.io",
+  redirects: {
+    "/meterraja-privacy-policy/": "/policies/meter_raja/",
+  },
 });
