@@ -17,6 +17,7 @@ export default defineConfig({
     "/meterraja-privacy-policy/": "/policies/meter_raja/",
     "/refund-cancellations/": "/policies/naviget_refund/",
     "/terms-conditions/": "/policies/naviget_terms/",
+    "/terms-&-conditions/": "/policies/naviget_terms/",
     "/privacy-policy/": "/policies/naviget/",
   },
 
