@@ -15,6 +15,9 @@ export default defineConfig({
 
   redirects: {
     "/meterraja-privacy-policy/": "/policies/meter_raja/",
+    "/refund-cancellations/": "/policies/naviget_refund/",
+    "/terms-conditions/": "/policies/naviget_terms/",
+    "/privacy-policy/": "/policies/naviget/",
   },
 
   integrations: [sitemap()],
