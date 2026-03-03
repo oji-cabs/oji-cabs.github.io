@@ -2,7 +2,9 @@
 import "../styles/global.css";
 const { title } = Astro.props;
 const description =
-    "Find cabs from trusted and experienced fleets operators of your city. We promise reliable rides, transparent pricing and zero cancellations on every scheduled ride. Book Bangalore airport cabs today on Naviget.";
+    "Rides you can rely on from trusted fleet operators of your city. We promise transparent pricing and no cancellations on every scheduled ride. Book Bangalore airport cabs today on Naviget.";
+// TODO: add image
+const socialImage = "";
 ---
 
 <!doctype html>
@@ -20,30 +22,22 @@ const description =
 
         <link rel="sitemap" href="/sitemap-index.xml" />
 
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
         <meta property="og:locale" content="en_IN" />
         <meta property="og:title" content={title} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://naviget.in/" />
         <meta property="og:description" content={description} />
         <meta property="og:site_name" content="Naviget" />
-
-        <!-- TODO: update og:image -->
-        <meta
-            property="og:image"
-            content="https://naviget.in/wp-content/uploads/2025/01/Features-Mobile-Mockup.png"
-        />
+        <meta property="og:image" content={socialImage} />
 
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:url" content="https://naviget.in/" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:creator" content="@NavigetOfficial" />
         <meta name="twitter:description" content={description} />
-
-        <!-- TODO: update twitter:image -->
-        <meta
-            name="twitter:image"
-            content="https://naviget.in/wp-content/uploads/2025/01/Features-Mobile-Mockup.png"
-        />
+        <meta name="twitter:image" content={socialImage} />
 
         <!-- Code and dependencies below this -->
 
