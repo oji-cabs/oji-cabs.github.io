@@ -82,6 +82,7 @@ const socialImage = "https://naviget.in/images/rider.webp";
                 <a
                     href="/"
                     class="flex items-center space-x-3 rtl:space-x-reverse"
+                    title="Naviget"
                 >
                     <img
                         src="/images/naviget_full_white.png"
@@ -125,6 +126,7 @@ const socialImage = "https://naviget.in/images/rider.webp";
                             <a
                                 href="/"
                                 class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                                title="Home"
                             >
                                 Home
                             </a>
@@ -133,6 +135,7 @@ const socialImage = "https://naviget.in/images/rider.webp";
                             <a
                                 href="/about"
                                 class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                                title="About"
                             >
                                 About
                             </a>
@@ -141,6 +144,7 @@ const socialImage = "https://naviget.in/images/rider.webp";
                             <a
                                 href="/contact"
                                 class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
+                                title="Contact Us"
                             >
                                 Contact
                             </a>
@@ -149,6 +153,7 @@ const socialImage = "https://naviget.in/images/rider.webp";
                             <a
                                 class="relative inline-flex items-center justify-center text-heading rounded-base bg-linear-to-br from-green-400 to-blue-600 p-0.5"
                                 href="https://download.naviget.in?website"
+                                title="Download App on Mobile"
                             >
                                 <span
                                     class="relative px-4 py-2.5 bg-neutral-primary-soft rounded-base leading-5"
@@ -161,6 +166,7 @@ const socialImage = "https://naviget.in/images/rider.webp";
                             <a
                                 class="mt-4 pr-4 text-heading md:hover:text-fg-brand md:p-0 md:mt-0"
                                 href="https://play.google.com/store/apps/details?id=com.ojicabs.oji"
+                                title="Download app on android"
                             >
                                 <svg
                                     fill="currentColor"
@@ -185,6 +191,7 @@ const socialImage = "https://naviget.in/images/rider.webp";
                             <a
                                 class="mt-4 text-heading md:hover:text-fg-brand md:px-3 md:mt-0"
                                 href="https://apps.apple.com/us/app/naviget/id6749488969"
+                                title="Download app on iphone"
                             >
                                 <svg
                                     width="24px"
@@ -226,7 +233,7 @@ const socialImage = "https://naviget.in/images/rider.webp";
 
         <slot />
 
-        <footer class="inset-s-0 pb-4 px-4 mx-auto max-w-7xl lg:pb-8">
+        <footer class="inset-s-0 pb-4 px-4 lg:px-0 mx-auto max-w-7xl lg:pb-8">
             <div
                 class="mx-auto w-full max-w-7xl bg-neutral-secondary-soft px-8 md:px-12 rounded-2xl border border-default"
             >
@@ -244,7 +251,20 @@ const socialImage = "https://naviget.in/images/rider.webp";
                                 </a>
                             </li>
                             <li class="mb-4">
-                                <a href="/contact" class="hover:underline">
+                                <a
+                                    href="/ai"
+                                    class="hover:underline"
+                                    title="Book rides with AI"
+                                >
+                                    Book rides with AI!
+                                </a>
+                            </li>
+                            <li class="mb-4">
+                                <a
+                                    href="/contact"
+                                    class="hover:underline"
+                                    title="Contact"
+                                >
                                     Contact
                                 </a>
                             </li>
@@ -260,27 +280,38 @@ const socialImage = "https://naviget.in/images/rider.webp";
                             <li class="mb-4">
                                 <a
                                     href="/policies/naviget"
-                                    class="hover:underline">Privacy Policy</a
+                                    class="hover:underline"
+                                    title="Privacy Policy"
                                 >
+                                    Privacy Policy
+                                </a>
                             </li>
                             <li class="mb-4">
                                 <a
                                     href="/policies/naviget_refund"
                                     class="hover:underline"
-                                    >Refund and Cancellation</a
+                                    title="Refund and Cancellation Policy"
                                 >
+                                    Refund and Cancellation
+                                </a>
                             </li>
                             <li class="mb-4">
                                 <a
                                     href="/policies/naviget_terms"
-                                    class="hover:underline">Naviget T&C</a
+                                    class="hover:underline"
+                                    title="Naviget Terms & Conditions"
                                 >
+                                    Naviget T&C
+                                </a>
                             </li>
                             <li class="mb-4">
                                 <a
                                     href="/policies/meter_raja"
-                                    class="hover:underline">Meter Raja</a
+                                    class="hover:underline"
+                                    title="Meter Raja App"
                                 >
+                                    Meter Raja
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -294,14 +325,20 @@ const socialImage = "https://naviget.in/images/rider.webp";
                             <li class="mb-4">
                                 <a
                                     href="https://apps.apple.com/us/app/naviget/id6749488969"
-                                    class="hover:underline">iOS</a
+                                    class="hover:underline"
+                                    title="Download for iOS"
                                 >
+                                    iOS
+                                </a>
                             </li>
                             <li class="mb-4">
                                 <a
                                     href="https://play.google.com/store/apps/details?id=com.ojicabs.oji"
-                                    class="hover:underline">Android</a
+                                    class="hover:underline"
+                                    title="Download for Android"
                                 >
+                                    Android
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -316,6 +353,7 @@ const socialImage = "https://naviget.in/images/rider.webp";
                         <a
                             href="https://in.linkedin.com/company/letsnaviget"
                             class="text-body hover:text-heading"
+                            title="Linkedin"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -333,6 +371,7 @@ const socialImage = "https://naviget.in/images/rider.webp";
                         <a
                             href="https://x.com/NavigetOfficial"
                             class="text-body hover:text-heading ms-5"
+                            title="X.com"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -349,6 +388,7 @@ const socialImage = "https://naviget.in/images/rider.webp";
                         <a
                             href="https://www.instagram.com/letsnaviget"
                             class="text-body hover:text-heading ms-5"
+                            title="Instagram"
                         >
                             <svg
                                 aria-hidden="true"
@@ -377,6 +417,7 @@ const socialImage = "https://naviget.in/images/rider.webp";
                         <a
                             href="https://www.reddit.com/r/NavigetOfficial/"
                             class="text-body hover:text-heading ms-5"
+                            title="Reddit"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
