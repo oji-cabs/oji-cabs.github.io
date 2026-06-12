@@ -14,7 +14,7 @@
 }
 
 @theme {
-    --font-serif: "QuincyCF", "ui-sans-serif";
+    --font-serif: "QuincyCF", var(--default-font-family);
 }
 
 .center-image {
