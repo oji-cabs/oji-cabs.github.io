@@ -3,30 +3,34 @@ import DefaultLayout from "../layouts/default.astro";
 ---
 
 <DefaultLayout title="Naviget - Contact">
-    <div class="py-6 px-4 mx-auto max-w-7xl lg:py-16">
+    <div
+        class="bg-linear-to-b from-[#050e25] to-[#050e25] to-10% py-6 px-4 lg:py-16"
+    >
         <div
-            class="bg-neutral-secondary-soft border border-default rounded-base p-8 md:p-12 grid lg:grid-cols-2 gap-8 items-center min-h-[60vh]"
+            class="max-w-7xl p-8 md:p-12 grid lg:grid-cols-2 gap-8 mx-auto items-center min-h-[60vh]"
         >
-            <div>
+            <div class="font-serif">
                 <h1 class="text-5xl md:text-6xl text-heading">Contact Us</h1>
-                <p class="text-body">For support, questions or parternships</p>
+                <p class="text-body text-xl">
+                    For support, questions or parternships
+                </p>
             </div>
 
             <div
                 class="min-h-[20vh] rounded-base border-white/20 text-white grid grid-cols-1 text-xl"
             >
                 <div>
-                    <div>Phone</div>
+                    <div class="font-serif underline">Phone</div>
                     <div>+91 7481832657</div>
                 </div>
 
                 <div>
-                    <div>Email</div>
+                    <div class="font-serif mt-3 underline">Email</div>
                     <div>hello@naviget.in</div>
                 </div>
 
                 <div>
-                    <div>Address</div>
+                    <div class="font-serif mt-3 underline">Address</div>
                     <div>
                         4th Floor, 648/A, Binnamangala 1st Stage, Indranagar,
                         Bengaluru, Karnataka - 560038

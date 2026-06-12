@@ -7,3 +7,32 @@
 @source "../../node_modules/flowbite";
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+    font-family: QuincyCF;
+    src: url("/fonts/Quincy-CF-Regular.ttf");
+}
+
+@theme {
+    --font-serif: "QuincyCF", "ui-sans-serif";
+}
+
+.center-image {
+    width: 25rem;
+    height: 25rem;
+    filter: saturate(120%);
+    margin: 0rem 0.5rem 0rem 0rem;
+}
+
+@media (width >= 64rem) {
+    .center-image {
+        width: 35rem;
+    }
+}
+
+.side-image {
+    width: 4rem;
+    border-radius: 100px;
+    height: 20rem;
+    margin: 0rem 0.5rem 0rem 0rem;
+}
