@@ -1,7 +1,7 @@
 ---
 const { images, name, title } = Astro.props;
 const classesWithImageBg = images.map(
-    (image_url) => "bg-[url(" + image_url + ")]",
+    (image_url: string) => "bg-[url(" + image_url + ")]",
 );
 ---
 
@@ -13,7 +13,7 @@ const classesWithImageBg = images.map(
     >
         <div class="flex flex-row items-center justify-center px-4 h-100">
             {
-                images.map((image_url, idx) => (
+                images.map((image_url: string, idx: number) => (
                     <div
                         id={"carousel-" + name + idx}
                         class={
@@ -28,7 +28,7 @@ const classesWithImageBg = images.map(
             }
         </div>
         <div
-            class="flex flex-row items-center text-white justify-center gap-8 pt-2 px-4"
+            class="flex flex-row items-center text-body justify-center gap-8 pt-2 px-4"
         >
             <div>
                 <button
@@ -52,7 +52,7 @@ const classesWithImageBg = images.map(
                     >
                 </button>
             </div>
-            <h3 class="text-3xl my-3 text-amber-100 font-serif text-center">
+            <h3 class="text-3xl my-3 text-body font-serif text-center">
                 <span class="px-2 inline-block underline">{title}</span>
             </h3>
             <div>
@@ -84,74 +84,77 @@ const classesWithImageBg = images.map(
 <script>
     class ImageSlider extends HTMLElement {
         connectedCallback() {
+            if (!this.dataset.images) {
+                return;
+            }
             const imageCount = this.dataset.images.split(",").length;
-            const imageidPrefix = this.dataset.imageidPrefix;
+            const imageidPrefix = this.dataset.imageidPrefix ?? "";
 
             let centerImageIdx = Number.parseInt(
-                this.querySelector(".center-image").id.replace(
+                this.querySelector(".center-image")?.id.replace(
                     imageidPrefix,
                     "",
-                ),
+                ) ?? "0",
             );
 
-            const removeClasses = (idx) => {
-                this.querySelector(`#${imageidPrefix}${idx}`).classList.remove(
+            const removeClasses = (idx: number) => {
+                this.querySelector(`#${imageidPrefix}${idx}`)?.classList.remove(
                     "center-image",
                 );
                 let left_side = idx - 1;
                 if (left_side >= 0) {
                     this.querySelector(
                         `#${imageidPrefix}${left_side}`,
-                    ).classList.remove("side-image");
+                    )?.classList.remove("side-image");
                 } else {
                     // to hide additonal images on right if it is terminal
                     this.querySelector(
                         `#${imageidPrefix}${idx + 2}`,
-                    ).classList.remove("side-image");
+                    )?.classList.remove("side-image");
                 }
                 let right_side = idx + 1;
                 if (right_side < imageCount) {
                     this.querySelector(
                         `#${imageidPrefix}${right_side}`,
-                    ).classList.remove("side-image");
+                    )?.classList.remove("side-image");
                 } else {
                     // to hide additonal images on left if it is terminal
                     this.querySelector(
                         `#${imageidPrefix}${idx - 2}`,
-                    ).classList.remove("side-image");
+                    )?.classList.remove("side-image");
                 }
             };
 
-            const addClasses = (idx) => {
-                this.querySelector(`#${imageidPrefix}${idx}`).classList.add(
+            const addClasses = (idx: number) => {
+                this.querySelector(`#${imageidPrefix}${idx}`)?.classList.add(
                     "center-image",
                 );
                 let left_side = idx - 1;
                 if (left_side >= 0) {
                     this.querySelector(
                         `#${imageidPrefix}${left_side}`,
-                    ).classList.add("side-image");
+                    )?.classList.add("side-image");
                 } else {
                     // to show additonal images on right if it is terminal
                     this.querySelector(
                         `#${imageidPrefix}${idx + 2}`,
-                    ).classList.add("side-image");
+                    )?.classList.add("side-image");
                 }
                 let right_side = idx + 1;
                 if (right_side < imageCount) {
                     this.querySelector(
                         `#${imageidPrefix}${right_side}`,
-                    ).classList.add("side-image");
+                    )?.classList.add("side-image");
                 } else {
                     // to hide additonal images on left if it is terminal
                     this.querySelector(
                         `#${imageidPrefix}${idx - 2}`,
-                    ).classList.add("side-image");
+                    )?.classList.add("side-image");
                 }
             };
 
             const prevButton = this.querySelector("#prev");
-            prevButton.addEventListener("click", () => {
+            prevButton?.addEventListener("click", () => {
                 removeClasses(centerImageIdx);
 
                 centerImageIdx = (imageCount + centerImageIdx - 1) % imageCount;
@@ -160,7 +163,7 @@ const classesWithImageBg = images.map(
             });
 
             const nextButton = this.querySelector("#next");
-            nextButton.addEventListener("click", () => {
+            nextButton?.addEventListener("click", () => {
                 removeClasses(centerImageIdx);
 
                 centerImageIdx = (centerImageIdx + 1) % imageCount;

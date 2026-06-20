@@ -3,18 +3,18 @@ import DefaultLayout from "../layouts/default.astro";
 ---
 
 <DefaultLayout title="Naviget - About Us">
-    <div class="flex items-center bg-[#050e25] px-4 min-h-screen">
+    <div class="flex items-center px-4 min-h-[80vh]">
         <div
             class="mx-auto rounded-base p-8 md:p-12 grid lg:grid-cols-2 gap-8 items-center max-w-7xl"
         >
             <div>
-                <h1 class="text-4xl md:text-6xl text-heading mb-8">
+                <h1 class="text-4xl md:text-6xl text-heading mb-8 font-serif">
                     Meet the Team behind Naviget
                 </h1>
                 <ul class="text-body text-2xl">
                     <li>
                         <a
-                            class="hover:text-fg-brand"
+                            class="hover:text-fg-brand underline"
                             href="https://www.linkedin.com/in/anmollsharma/"
                             title="Anmol Sharma"
                             target="_blank"
@@ -25,7 +25,7 @@ import DefaultLayout from "../layouts/default.astro";
                     </li>
                     <li>
                         <a
-                            class="hover:text-fg-brand"
+                            class="hover:text-fg-brand underline"
                             href="https://linktr.ee/numberbee"
                             target="_blank"
                             title="Yash Garg"
@@ -36,7 +36,7 @@ import DefaultLayout from "../layouts/default.astro";
                     </li>
                     <li>
                         <a
-                            class="hover:text-fg-brand"
+                            class="hover:text-fg-brand underline"
                             href="https://www.linkedin.com/in/58anand-kumar/"
                             target="_blank"
                             title="Anand Kumar"
@@ -47,7 +47,7 @@ import DefaultLayout from "../layouts/default.astro";
                     </li>
                     <li>
                         <a
-                            class="hover:text-fg-brand"
+                            class="hover:text-fg-brand underline"
                             href="https://www.linkedin.com/in/premhpopatia04/"
                             target="_blank"
                             title="Prem Popatia"
@@ -63,6 +63,308 @@ import DefaultLayout from "../layouts/default.astro";
                 src="/images/team.webp"
                 alt="Team Naviget"
             />
+        </div>
+    </div>
+    <div class="flex justify-center bg-neutral-primary mb-10">
+        <div class="max-w-7xl grid lg:grid-cols-12 gap-8 items-center px-4">
+            <h2
+                class="text-4xl md:text-6xl text-heading lg:col-span-5 font-serif"
+            >
+                Everything you should know about Naviget
+            </h2>
+
+            <div
+                id="accordion-collapse"
+                data-accordion="collapse"
+                class="rounded-base border border-default overflow-hidden shadow-xs lg:col-span-7"
+            >
+                <h2 id="accordion-collapse-heading-10">
+                    <button
+                        type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body rounded-t-base border border-t-0 border-x-0 border-b-neutral-primary-soft hover:text-heading hover:bg-neutral-secondary-medium gap-3 bg-neutral-primary-medium"
+                        data-accordion-target="#accordion-collapse-body-10"
+                        aria-expanded="true"
+                        aria-controls="accordion-collapse-body-10"
+                    >
+                        <span class="capitalize text-left font-serif text-xl"
+                            >What is Naviget?</span
+                        >
+                        <svg
+                            data-accordion-icon
+                            class="w-5 h-5 rotate-180 shrink-0"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            ><path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m5 15 7-7 7 7"></path></svg
+                        >
+                    </button>
+                </h2>
+                <div
+                    id="accordion-collapse-body-10"
+                    class="hidden border border-s-0 border-e-0 border-t-0 border-b-default"
+                    aria-labelledby="accordion-collapse-heading-10"
+                >
+                    <div class="p-4 md:p-5">
+                        <p class="mb-2 text-body">
+                            Naviget is a reliable cab booking app created to fix
+                            common ride-hailing problems like surge pricing,
+                            cancellations, and inconsistent service. Naviget
+                            delivers clean, on-time rides at fair prices.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 id="accordion-collapse-heading-20">
+                    <button
+                        type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body border border-x-0 border-b-neutral-primary-soft border-t-0 hover:text-heading hover:bg-neutral-secondary-medium gap-3 bg-neutral-primary-medium"
+                        data-accordion-target="#accordion-collapse-body-20"
+                        aria-expanded="false"
+                        aria-controls="accordion-collapse-body-20"
+                    >
+                        <span class="capitalize text-left font-serif text-xl"
+                            >How Does Naviget Work?</span
+                        >
+                        <svg
+                            data-accordion-icon
+                            class="w-5 h-5 rotate-180 shrink-0"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            ><path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m5 15 7-7 7 7"></path></svg
+                        >
+                    </button>
+                </h2>
+                <div
+                    id="accordion-collapse-body-20"
+                    class="hidden border border-s-0 border-e-0 border-t-0 border-b-default"
+                    aria-labelledby="accordion-collapse-heading-20"
+                >
+                    <div class="p-4 md:p-5">
+                        <p class="mb-2 text-body">
+                            Naviget aggregates premium fleet services only. We
+                            partner with trusted local fleet operators and niche
+                            mobility providers that focus on service quality
+                            rather than scale. Each partner goes through a
+                            rigorous quality check covering vehicle condition,
+                            driver verification, punctuality, and service
+                            consistency. You can try our premium electric
+                            vehicle rides comprising of BYD, Kia and MG
+                            vehicles. Get clean, reliable, and transparently
+                            priced cab rides every time.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 id="accordion-collapse-heading-30">
+                    <button
+                        type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body hover:text-heading hover:bg-neutral-secondary-medium gap-3 border border-t-0 border-x-0 border-b-neutral-primary-soft bg-neutral-primary-medium"
+                        data-accordion-target="#accordion-collapse-body-30"
+                        aria-expanded="false"
+                        aria-controls="accordion-collapse-body-30"
+                    >
+                        <span class="capitalize text-left font-serif text-xl"
+                            >What makes Naviget different from other
+                            ride-hailing apps?</span
+                        >
+                        <svg
+                            data-accordion-icon
+                            class="w-5 h-5 rotate-180 shrink-0"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            ><path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m5 15 7-7 7 7"></path></svg
+                        >
+                    </button>
+                </h2>
+                <div
+                    id="accordion-collapse-body-30"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-30"
+                >
+                    <div
+                        class="p-4 md:p-5 border border-t-default border-b-0 border-x-0"
+                    >
+                        <p class="mb-2 text-body">
+                            Unlike other ride-hailing apps where supply is
+                            uncontrolled and ride quality can be inconsistent,
+                            Naviget ensures consistency that you can rely on.
+                            This extra layer of accountability guarantees clean
+                            cars, professional chauffeurs, and dependable rides
+                            every time, so your experience is consistent, ride
+                            after ride.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 id="accordion-collapse-heading-40">
+                    <button
+                        type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body hover:text-heading hover:bg-neutral-secondary-medium gap-3 border border-t-0 border-x-0 border-b-neutral-primary-soft bg-neutral-primary-medium"
+                        data-accordion-target="#accordion-collapse-body-40"
+                        aria-expanded="false"
+                        aria-controls="accordion-collapse-body-40"
+                    >
+                        <span class="capitalize text-left font-serif text-xl"
+                            >Is It For Airport Rides Only?</span
+                        >
+                        <svg
+                            data-accordion-icon
+                            class="w-5 h-5 rotate-180 shrink-0"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            ><path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m5 15 7-7 7 7"></path></svg
+                        >
+                    </button>
+                </h2>
+                <div
+                    id="accordion-collapse-body-40"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-40"
+                >
+                    <div
+                        class="p-4 md:p-5 border border-t-default border-b-0 border-x-0"
+                    >
+                        <p class="mb-2 text-body">
+                            Currently, Naviget focuses on scheduled premium
+                            airport rides, you can book an assured comfort
+                            rides. Naviget will soon offer on-demand rides more
+                            widely for all your everyday travel needs.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 id="accordion-collapse-heading-41">
+                    <button
+                        type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body hover:text-heading hover:bg-neutral-secondary-medium gap-3 border border-t-0 border-x-0 border-b-neutral-primary-soft bg-neutral-primary-medium"
+                        data-accordion-target="#accordion-collapse-body-41"
+                        aria-expanded="false"
+                        aria-controls="accordion-collapse-body-41"
+                    >
+                        <span class="capitalize text-left font-serif text-xl"
+                            >Do you have cabs for rental and intercity?</span
+                        >
+                        <svg
+                            data-accordion-icon
+                            class="w-5 h-5 rotate-180 shrink-0"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            ><path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m5 15 7-7 7 7"></path></svg
+                        >
+                    </button>
+                </h2>
+                <div
+                    id="accordion-collapse-body-41"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-41"
+                >
+                    <div
+                        class="p-4 md:p-5 border border-t-default border-b-0 border-x-0"
+                    >
+                        <p class="mb-2 text-body">
+                            Yes, you can book rental rides with us, this service
+                            is not available yet on the app. Please contact on
+                            our provided phone number to check to check for
+                            availability and prices. Hourly prices, excluding
+                            toll and parking, are typically - Rs 500 for BYD
+                            cars and Innova Crysta, Rs 400 for MG Windsor and ZS
+                            Ev.
+                        </p>
+                    </div>
+                </div>
+
+                <h2 id="accordion-collapse-heading-50">
+                    <button
+                        type="button"
+                        class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-body hover:text-heading hover:bg-neutral-secondary-medium gap-3 bg-neutral-primary-medium"
+                        data-accordion-target="#accordion-collapse-body-50"
+                        aria-expanded="false"
+                        aria-controls="accordion-collapse-body-50"
+                    >
+                        <span class="capitalize text-left font-serif text-xl"
+                            >How do I book an airport ride on Naviget?</span
+                        >
+                        <svg
+                            data-accordion-icon
+                            class="w-5 h-5 rotate-180 shrink-0"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="24"
+                            height="24"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            ><path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m5 15 7-7 7 7"></path></svg
+                        >
+                    </button>
+                </h2>
+                <div
+                    id="accordion-collapse-body-50"
+                    class="hidden"
+                    aria-labelledby="accordion-collapse-heading-50"
+                >
+                    <div
+                        class="p-4 md:p-5 border border-t-default border-b-0 border-x-0"
+                    >
+                        <p class="mb-2 text-body">
+                            Simply open the app, enter your destination, choose
+                            most suitable ride, and book with just a few taps.
+                            You can optionally request for a Placard service for
+                            airport pickup after booking at a small additional
+                            charge. Please inform us about any special requests
+                            4-5 hours in advance.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </DefaultLayout>

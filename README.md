@@ -13,3 +13,10 @@ All commands are run from the root of the project:
 `bun preview`
 
 `bun astro -- --help`
+
+## Fetch lfs objects
+
+```bash
+git lfs pull
+git lfs fetch --all
+```
