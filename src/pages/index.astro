@@ -6,25 +6,24 @@ import DefaultLayout from "../layouts/default.astro";
     <section>
         <div class="mx-auto">
             <div
-                class="min-h-dvh items-center flex justify-center backdrop-blur-md pt-[12vh] backdrop-saturate-70"
+                class="min-h-[95vh] items-center flex justify-center backdrop-blur-md backdrop-saturate-70"
             >
                 <div
-                    class="grid lg:grid-cols-2 gap-8 items-center max-w-7xl px-4 pb-4"
+                    class="grid lg:grid-cols-12 gap-8 items-center px-4 lg:px-16"
                 >
-                    <div>
+                    <div class="lg:col-span-5">
                         <h1
-                            class="tracking-tighter text-5xl md:text-6xl font-bold my-6 leading-10 md:leading-16 font-serif"
+                            class="text-5xl md:text-6xl lg:text-7xl mb-8 lg:mb-16"
                         >
                             Nothing fancy just reliable rides
                         </h1>
 
                         <a
                             type="button"
-                            class="inline-flex items-center justify-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium text-base px-5 py-3 focus:outline-none lg:text-3xl transition-colors"
-                            href="https://download.naviget.in?website"
+                            class="inline-flex items-center justify-center text-white bg-brand hover:bg-brand-strong box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium text-base px-5 py-3 focus:outline-none transition-colors app-download cursor-pointer"
                             title="Download Naviget"
                         >
-                            Try Now
+                            Download Naviget
                             <svg
                                 class="w-5 h-5 ms-1.5 -me-0.5"
                                 aria-hidden="true"
@@ -44,9 +43,9 @@ import DefaultLayout from "../layouts/default.astro";
 
                         <a
                             type="button"
-                            class="inline-flex items-center justify-center text-blue-600 hover:bg-blue-100 hover:text-blue-900 box-border border focus:ring-4 focus:ring-brand-medium shadow-xs font-medium text-base px-5 py-3 focus:outline-none lg:text-3xl transition-colors"
-                            href="https://download.naviget.in?website"
-                            title="Download Naviget"
+                            class="inline-flex items-center justify-center text-blue-600 hover:bg-blue-100 hover:text-blue-900 box-border border focus:ring-4 focus:ring-brand-medium shadow-xs font-medium text-base px-5 py-3 focus:outline-none transition-colors"
+                            href="https://wa.me/+917481832657"
+                            title="Naviget Concierge"
                         >
                             Book via Concierge
                             <svg
@@ -66,11 +65,11 @@ import DefaultLayout from "../layouts/default.astro";
                             >
                         </a>
                     </div>
-                    <div>
+                    <div class="lg:col-span-7">
                         <img
                             class="rounded-3xl mx-auto w-full saturate-100"
                             src="/images/rider.webp"
-                            alt="Pre scheduled cabs on Naviget to travel with family and friends"
+                            alt="Pre scheduled cabs on Naviget to travel with family, friends and coworkers."
                         />
                     </div>
                 </div>
@@ -81,7 +80,7 @@ import DefaultLayout from "../layouts/default.astro";
                     <div class="uppercase text-2xl">
                         For people who value reliability...
                     </div>
-                    <div class="text-5xl md:text-6xl mt-4">
+                    <div class="text-5xl md:text-6xl mt-4 leading-20">
                         With No Cancellation, Transparent Fares, Professional
                         Chauffeurs, AI-powered Dashcams for added safety, and
                         24/7 "Human" support
@@ -158,7 +157,9 @@ import DefaultLayout from "../layouts/default.astro";
                 </div>
             </div>
 
-            <div class="flex justify-center gap-8 items-center mt-20 mb-10">
+            <div
+                class="flex flex-col justify-center gap-8 items-center my-4 min-h-[90vh]"
+            >
                 <div class="max-w-7xl px-4 text-center">
                     <h2
                         class="text-center font-semibold text-heading text-5xl md:text-6xl my-4"
@@ -170,71 +171,103 @@ import DefaultLayout from "../layouts/default.astro";
                         Ride for every journey and occasion
                     </div>
                 </div>
+                <div
+                    class="overflow-x-scroll max-w-7xl mx-auto snap-x flex gap-8 px-2 md:px-0"
+                >
+                    <div
+                        class="shrink-0 snap-start w-100 h-120 bg-linear-to-br from-white to-30% to-gray-300 flex flex-col"
+                    >
+                        <div class="my-5 flex flex-2">
+                            <img
+                                class="mx-auto mt-auto"
+                                src="/images/byd_white.webp"
+                                alt="BYD eMax 7"
+                            />
+                        </div>
+                        <div
+                            class="m-5 flex flex-col flex-1 text-black/60 text-lg"
+                        >
+                            <div class="flex flex-row">
+                                <img
+                                    class="h-8 w-8"
+                                    src="/images/people.svg"
+                                    alt="person count:"
+                                />
+                                <span class="p-1">4</span>
+                                <img
+                                    class="h-8 w-8"
+                                    src="/images/luggage.svg"
+                                    alt="luggage count:"
+                                />
+                                <span class="p-1">4</span>
+                            </div>
+                            <div>BYD eMax 7</div>
+                        </div>
+                    </div>
+                    <div
+                        class="shrink-0 snap-start w-100 h-120 bg-linear-to-br from-white to-30% to-gray-300 flex flex-col"
+                    >
+                        <div class="m-5 flex flex-2">
+                            <img
+                                class="mx-auto mt-auto"
+                                src="/images/mg_zs_white.webp"
+                                alt="MG ZS Ev"
+                            />
+                        </div>
+                        <div
+                            class="m-5 flex flex-col flex-1 text-black/60 text-lg"
+                        >
+                            <div class="flex flex-row">
+                                <img
+                                    class="h-8 w-8"
+                                    src="/images/people.svg"
+                                    alt="person count:"
+                                />
+                                <span class="p-1">4</span>
+                                <img
+                                    class="h-8 w-8"
+                                    src="/images/luggage.svg"
+                                    alt="luggage count:"
+                                />
+                                <span class="p-1">3</span>
+                            </div>
+                            <div>MG ZS</div>
+                        </div>
+                    </div>
+                    <div
+                        class="shrink-0 snap-start w-100 h-120 bg-linear-to-br from-white to-30% to-gray-300 flex flex-col"
+                    >
+                        <div class="m-5 flex flex-2">
+                            <img
+                                class="mx-auto mt-auto"
+                                src="/images/windsor_white.webp"
+                                alt="MG Windsor"
+                            />
+                        </div>
+                        <div
+                            class="m-5 flex flex-col flex-1 text-black/60 text-lg"
+                        >
+                            <div class="flex flex-row">
+                                <img
+                                    class="h-8 w-8"
+                                    src="/images/people.svg"
+                                    alt="person count:"
+                                />
+                                <span class="p-1">4</span>
+                                <img
+                                    class="h-8 w-8"
+                                    src="/images/luggage.svg"
+                                    alt="luggage count:"
+                                />
+                                <span class="p-1">3</span>
+                            </div>
+                            <div>MG Windsor</div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div
-                class="overflow-x-scroll max-w-7xl mx-auto snap-x flex gap-8 px-2 md:px-0"
-            >
-                <div
-                    class="shrink-0 snap-start w-100 h-120 bg-linear-to-br from-white to-30% to-gray-300 flex flex-col"
-                >
-                    <div class="my-5 flex flex-2">
-                        <img
-                            class="mx-auto mt-auto"
-                            src="/images/byd_white.webp"
-                        />
-                    </div>
-                    <div class="m-5 flex flex-col flex-1 text-black/60 text-lg">
-                        <div class="flex flex-row">
-                            <img class="h-8 w-8" src="/images/people.svg" />
-                            <span class="p-1">4</span>
-                            <img class="h-8 w-8" src="/images/luggage.svg" />
-                            <span class="p-1">4</span>
-                        </div>
-                        <div>BYD eMax 7</div>
-                    </div>
-                </div>
-                <div
-                    class="shrink-0 snap-start w-100 h-120 bg-linear-to-br from-white to-30% to-gray-300 flex flex-col"
-                >
-                    <div class="m-5 flex flex-2">
-                        <img
-                            class="mx-auto mt-auto"
-                            src="/images/mg_zs_white.webp"
-                        />
-                    </div>
-                    <div class="m-5 flex flex-col flex-1 text-black/60 text-lg">
-                        <div class="flex flex-row">
-                            <img class="h-8 w-8" src="/images/people.svg" />
-                            <span class="p-1">4</span>
-                            <img class="h-8 w-8" src="/images/luggage.svg" />
-                            <span class="p-1">3</span>
-                        </div>
-                        <div>MG ZS</div>
-                    </div>
-                </div>
-                <div
-                    class="shrink-0 snap-start w-100 h-120 bg-linear-to-br from-white to-30% to-gray-300 flex flex-col"
-                >
-                    <div class="m-5 flex flex-2">
-                        <img
-                            class="mx-auto mt-auto"
-                            src="/images/windsor_white.webp"
-                        />
-                    </div>
-                    <div class="m-5 flex flex-col flex-1 text-black/60 text-lg">
-                        <div class="flex flex-row">
-                            <img class="h-8 w-8" src="/images/people.svg" />
-                            <span class="p-1">4</span>
-                            <img class="h-8 w-8" src="/images/luggage.svg" />
-                            <span class="p-1">3</span>
-                        </div>
-                        <div>MG Windsor</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="bg-black my-30 pt-10 md:pt-30">
+            <div class="bg-black pt-10 md:pt-30">
                 <div class="max-w-7xl mx-auto grid grid-cols-5 w-full">
                     <div
                         class="col-span-5 md:col-span-2 flex order-last md:order-first"
@@ -242,6 +275,7 @@ import DefaultLayout from "../layouts/default.astro";
                         <img
                             class="mx-auto mt-auto"
                             src="/images/chauffeur_photo.webp"
+                            alt="Naviget Chauffeur"
                         />
                     </div>
                     <div
@@ -335,6 +369,7 @@ import DefaultLayout from "../layouts/default.astro";
                             <img
                                 class="mx-auto mt-auto px-5"
                                 src="/images/whatsapp_concierge.webp"
+                                alt="Naviget Concierge"
                             />
                         </div>
                         <div
@@ -355,13 +390,15 @@ import DefaultLayout from "../layouts/default.astro";
                 </div>
             </div>
 
-            <div class="pt-30 px-4">
+            <div
+                class="px-4 min-h-[90vh] flex flex-col items-center justify-center"
+            >
                 <div
                     class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-10"
                 >
-                    <div>
+                    <div class="flex flex-col justify-center">
                         <h2
-                            class="font-semibold text-gray-800 text-5xl md:text-6xl mb-10"
+                            class="font-semibold text-gray-800 text-5xl md:text-6xl lg:text-7xl mb-10"
                         >
                             Intelligent
                             <span class="text-blue-900"> Safeguards. </span>
@@ -380,8 +417,9 @@ import DefaultLayout from "../layouts/default.astro";
                     </div>
                     <div>
                         <img
-                            class="mx-auto mt-auto"
+                            class="mx-auto mt-auto p-5"
                             src="/images/dashcam.webp"
+                            alt="Vehicle Dashcam Safety"
                         />
                     </div>
                 </div>
@@ -412,6 +450,7 @@ import DefaultLayout from "../layouts/default.astro";
                             <img
                                 class="relative top-8 lg:top-16"
                                 src="/images/maybach.webp"
+                                alt="Mercedes Maybach"
                             />
                         </div>
                     </div>
