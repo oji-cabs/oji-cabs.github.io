@@ -1,9 +1,42 @@
 ---
-import DefaultLayout from "../layouts/default.astro";
+import PremiumLayout from "../layouts/premium.astro";
 ---
 
-<DefaultLayout title="Naviget - Premium Airport and Rental Rides">
-    <section class="bg-black">
-        <div></div>
+<PremiumLayout title="Naviget - Premium Airport and Rental Rides">
+    <section class="bg-black text-white">
+        <div class="mx-auto grid grid-cols-1 md:grid-cols-2 min-h-screen items-center md:px-10 max-w-7xl md:gap-5">
+            <div class="p-5">
+                <h1 class="text-4xl md:text-6xl mb-4">
+                    Naviget Select for Selected Rides
+                </h1>
+                <p class="mb-2 sm:mb-12">
+                    A private concierge for airport transfers and hourly rides,
+                    built around reliability, comfort and personal service.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a
+                        type="button"
+                        class="flex-1 hover:cursor-pointer uppercase text-black bg-white rounded-full p-4 text-center"
+                        href="https://wa.me/+917481832657"
+                        target="_blank"
+                    >
+                        WhatsApp Concierge
+                    </a>
+                    <a
+                        type="button"
+                        class="flex-1 hover:cursor-pointer uppercase border rounded-full p-4 text-center app-download"
+                    >
+                        Download App
+                    </a>
+                </div>
+            </div>
+            <div class="p-5 md:p-8 max-w-xl mx-auto">
+                <img
+                    class="rounded-3xl"
+                    src="/images/founding_50_landing.png"
+                    alt="Naviget Founding 50. Select Premium Rides."
+                />
+            </div>
+        </div>
     </section>
-</DefaultLayout>
+</PremiumLayout>

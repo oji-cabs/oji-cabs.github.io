@@ -1,0 +1,88 @@
+---
+import "../styles/global.css";
+const { title } = Astro.props;
+const description =
+    "Premium cabs with a professional chauffeur. Transparent pricing and zero cancellations. Try airport cabs, rentals and intercity in Bangalore and Delhi.";
+const socialImage = "https://naviget.in/images/rider.webp";
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{title}</title>
+
+        <meta name="description" content={description} />
+        <meta name="keywords" content="airport,cab,bangalore,delhi,suv" />
+        <link rel="canonical" href="https://naviget.in/" />
+
+        <link rel="sitemap" href="/sitemap-index.xml" />
+
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+
+        <meta property="og:locale" content="en_IN" />
+        <meta property="og:title" content={title} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://naviget.in/" />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content="Naviget" />
+        <meta property="og:image" content={socialImage} />
+
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="https://naviget.in/" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:creator" content="@NavigetOfficial" />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={socialImage} />
+
+        <!-- Code and dependencies below this -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body class="bg-no-repeat bg-cover bg-fixed bg-top">
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            is:inline
+            src="https://www.googletagmanager.com/gtag/js?id=G-7DNVVZT0MG"
+        ></script>
+        <script>
+            // @ts-nocheck
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-7DNVVZT0MG");
+        </script>
+        <slot />
+
+        <script
+            is:inline
+            src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"
+        ></script>
+        <script>
+            // Redirect to Apple store page if on desktop
+            let anchors = document.querySelectorAll("a.app-download");
+            anchors.forEach((anchor) => {
+                anchor.addEventListener("click", () => {
+                    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+                        window.open("https://download.naviget.in");
+                    } else {
+                        window.open(
+                            "https://apps.apple.com/us/app/naviget/id6749488969",
+                        );
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
